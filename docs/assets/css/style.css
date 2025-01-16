@@ -1,0 +1,250 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Agregar desplazamiento suave */
+  }
+  
+  nav {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px; /* Aumentar la altura del nav */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; /* Asegura que el nav se extienda completamente a lo ancho de la pantalla */
+    z-index: 1000; /* Asegurar que el nav esté encima de otros elementos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-container img {
+    height: 100px; /* Ajustar altura del logo según sea necesario */
+  }
+  
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .hamburger-menu {
+    cursor: pointer;
+    display: none; /* Ocultar por defecto en pantallas más grandes */
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+  }
+  
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  /* ... (código anterior) ... */
+  
+  @media (max-width: 768px) {
+    .hamburger-menu {
+      display: block; /* Mostrar en pantallas más pequeñas */
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      position: absolute;
+      top: 125px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      text-align: center;
+      display: none; /* Ocultar por defecto en pantallas más pequeñas */
+    }
+  
+    .nav-links.active {
+      display: flex; /* Mostrar cuando el menú está activo */
+    }
+  
+    .nav-links li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centrar los elementos en el nav */
+    align-items: center;
+  }
+  
+  nav li {
+    margin: 0 10px; /* Agregar un espacio a ambos lados de cada elemento */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+  }
+ 
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  header.hero {
+    background: url('./kitchen.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    height: 500px;
+  }
+  
+  header.hero .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  header.hero h1 {
+    font-size: 2.5em;
+  }
+  
+  header.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .about-us,
+  .menu,
+  .order-online,
+  .gallery,
+  .contact,
+  .facebook-video {
+    padding: 40px 20px;
+  }
+  
+  .menu-item {
+    margin-bottom: 20px;
+  }
+  
+  .menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .order-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ff6600;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .order-button:hover {
+    background-color: #e55e00;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+ 
+  #scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: #ff0000; /* Color rojo */
+    border: 2px solid #ff0000; /* Borde rojo */
+    padding: 15px; /* Aumentar tamaño del botón */
+    font-size: 24px; /* Aumentar tamaño de la flecha */
+    line-height: 1; /* Hacer la altura del contorno igual al tamaño de la fuente */
+    cursor: pointer;
+    border-radius: 50%; /* Hacer el botón completamente circular */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  @media (max-width: 992px) {
+    #scroll-to-top {
+      right: 30px; /* Ajustar posición a la izquierda en dispositivos móviles */
+    }
+  }
+  
+  #scroll-to-top:hover {
+    background-color: #ff0000; /* Cambiar color de fondo en hover */
+    color: #fff; /* Cambiar color de texto en hover */
+    border-color: #fff; /* Cambiar color del borde en hover */
+  }
+  
+  .mapa {
+    width: 100%;
+    margin: auto;
+    
+  }
+  
+  .mapa iframe {
+    width: 90%;
+    height: 450px;
+    border: 2px orange solid;
+    border-radius: 15px;
+  }
+  
+  @media (max-width: 992px) {
+    .mapa {
+      
+      margin: auto;
+     
+    }
+  }
+
+  .contact-info {
+    background-color: #333;
+    color: #fff;
+    text-align: right;
+    padding: 10px 20px;
+  }
+  
+  .contact-info a {
+    color: #fff;
+    text-decoration: none;
+  }
